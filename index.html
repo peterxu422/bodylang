@@ -21,57 +21,56 @@
             </div>
             
             <div data-role="content" class="content">
-                <br/>
-                <div data-role="text">
-                    <input type="text" name="expression" id="expression" placeholder="Expression"/>
-                </div>    
                 
-                <br/>
-                <div data-demo-html="true">
-                    <form>
+                <!--  action="getexpr.php" method="get" -->
+                <form id="frmSearch">
+                    <br/>
+                    <div data-role="text">
+                        <input type="text" name="expression" id="expression" placeholder="Expression"/>
+                    </div>    
+                    
+                    <br/>
+                    <div data-demo-html="true">
                         <select name="feelings" id="feelings">
                             <option>Feeling</option>
-                            <option value="1">Happy</option>
-                            <option value="2">Angry</option>
-                            <option value="3">Sad</option>
-                            <option value="4">Excited</option>
-                            <option value="5">Tired</option>
+                            <option value="Happy">Happy</option>
+                            <option value="Angry">Angry</option>
+                            <option value="Sad">Sad</option>
+                            <option value="Excited">Excited</option>
+                            <option value="Tired">Tired</option>
                         </select>
-                    </form>
-                </div>
-                
-                <br/>
-                <div>
-                    <form>
-                        <select name="bodypart" id="bodypart">
-                            <option>Body Part</option>
-                            <option value="1">Head</option>
-                            <option value="2">Eyes</option>
-                            <option value="3">Nose</option>
-                            <option value="4">Mouth</option>
-                            <option value="5">Tongue</option>
-                            <option value="6">Ear</option>
-                            <option value="7">Arm</option>
-                            <option value="8">Hand</option>
-                            <option value="9">Finger</option>
-                            <option value="10">Stomach</option>
-                            <option value="11">Waist</option>
-                            <option value="12">Leg</option>
-                            <option value="13">Thigh</option>
-                            <option value="14">Feet</option>
-                        </select>
-                    </form>
-                </div>
-                
-                <br/>
-                <form>
-                    <div>
-                        <input type="submit" value="Search" id="submit_btn"/>
                     </div>
-                </form>
                     
-                
-            </div> <!-- End of content -->
+                    <br/>
+                    <div>
+                        <select name="bodypart" id="bodyPart">
+                            <option>Body Part</option>
+                            <option value="Head">Head</option>
+                            <option value="Face">Face</option>
+                            <option value="Eye">Eye</option>
+                            <option value="Eyebrow">Eyebrow</option>
+                            <option value="Nose">Nose</option>
+                            <option value="Mouth">Mouth</option>
+                            <option value="Tongue">Tongue</option>
+                            <option value="Ear">Ear</option>
+                            <option value="Arm">Arm</option>
+                            <option value="Elbow">Elbow</option>
+                            <option value="Hand">Hand</option>
+                            <option value="Finger">Finger</option>
+                            <option value="Stomach">Stomach</option>
+                            <option value="Waist">Waist</option>
+                            <option value="Leg">Leg</option>
+                            <option value="Thigh">Thigh</option>
+                            <option value="Feet">Feet</option>
+                        </select>
+                    </div>
+                    
+                    <br/>
+                    <div>
+                        <input type="submit" value="Search" id="submit_btn" onclick="getexpr()"/>
+                    </div>       
+                </div> <!-- End of content -->
+            </form>
             
             <div data-role="footer">
                 <h1>Copyright, 2014. Peter Xu</h1>
@@ -87,7 +86,7 @@
                 <h1>Results</h1>
             </div>
             
-            <div data-role="content" id="res_content">
+            <div data-role="content" class="content" id="res_content">
             </div>
             
             <div data-role="footer">
