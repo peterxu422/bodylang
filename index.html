@@ -2,8 +2,8 @@
 <html>
     <head>
         <title>Body Language</title>
-         <link rel="stylesheet" href="main.css"/>
-         <link rel="stylesheet" href="http://code.jquery.com/mobile/1.0b1/jquery.mobile-1.0b1.min.css" />
+        <link rel="stylesheet" href="main.css"/>
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.0b1/jquery.mobile-1.0b1.min.css" />
         <script type="text/javascript" src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
         <script type="text/javascript" src="http://code.jquery.com/mobile/1.0rc2/jquery.mobile-1.0rc2.min.js"></script>
         
@@ -12,24 +12,15 @@
     
     <body>
         
-        <?php
-            $con=mysqli_connect("localhost", "root", "usbw", "movedb");
-
-            if(mysqli_connect_errno()) {
-                echo "Failed to connect to MySQL: " . mysqli_connect_error();
-            }
-
-            mysqli_close($con);
-        ?>
-        
         <!-- Home Page -->
+        <!-- --------------------------------------- -->
         <div data-role="page" id="home">
+            
             <div data-role="header">
-            <h1>Body Language</h1>
+            <h1>Home</h1>
             </div>
             
-            
-            <div data-role="content">
+            <div data-role="content" class="content">
                 <br/>
                 <div data-role="text">
                     <input type="text" name="expression" id="expression" placeholder="Expression"/>
@@ -73,18 +64,37 @@
                 </div>
                 
                 <br/>
-                <div>
-                    <input type="submit" value="Search" id="submit_btn"/>
-                </div>
+                <form>
+                    <div>
+                        <input type="submit" value="Search" id="submit_btn"/>
+                    </div>
+                </form>
+                    
                 
             </div> <!-- End of content -->
             
             <div data-role="footer">
                 <h1>Copyright, 2014. Peter Xu</h1>
             </div>
+
+        </div> <!-- End of home -->            
+
+        
+        <!-- Results Page -->
+        <!-- --------------------------------------- -->
+        <div data-role="page" id="results">
+            <div data-role="header">
+                <h1>Results</h1>
+            </div>
             
-        </div> <!-- End of home -->
-                    
+            <div data-role="content" id="res_content">
+            </div>
+            
+            <div data-role="footer">
+                <h1>Copyright, 2014. Peter Xu</h1>
+            </div>
+            
+        </div> <!-- End of Results -->
         
     </body>
 </html>
